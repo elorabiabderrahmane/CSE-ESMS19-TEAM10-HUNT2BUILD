@@ -1,84 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUNT2BUILD</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./Icons/red.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HUNT2BUILD — A One Piece-themed hackathon by CSE Club · ESI</title>
+  <meta name="description" content="Scan the code, solve the problem, find the treasure. Nine crews hunt for hidden QR treasures across ESI campus, then get 72 hours to build what they unlock." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="#">HUNT2BUILD</a> 
-            <ul>
-                <li><a href="#">THE HUNT</a></li>
-                <li><a href="#">TRACKS</a></li>
-                <li><a href="#">AGENDA</a></li>
-                <li><a href="#">WHY JOIN</a></li>
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="HUNT2BUILD — home">
+      <img class="brand__mark" src="assets/logo-mark.png" alt="" />
+      <img class="brand__name" src="assets/logo-name.png" alt="HUNT2BUILD" />
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#hunt">THE HUNT</a>
+      <a href="#tracks">TRACKS</a>
+      <a href="#agenda">AGENDA</a>
+      <a href="#why">WHY JOIN</a>
+    </nav>
+
+    <a class="btn-mint btn-mint--nav" href="#join">
+      <span>Register</span>
+      <img src="assets/flag.png" alt="" />
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hunt">
+      <div class="rings" aria-hidden="true">
+        <div class="ring" style="--l:202.91px;--t:-66px;--w:1522.59px;--h:1231.44px;--iw:1350px;--ih:972px"><img src="assets/ring-1.svg" alt="" /></div>
+        <div class="ring" style="--l:300.36px;--t:-12px;--w:1353.41px;--h:1094.61px;--iw:1200px;--ih:864px"><img src="assets/ring-2.svg" alt="" /></div>
+        <div class="ring" style="--l:397.82px;--t:42px;--w:1184.24px;--h:957.79px;--iw:1050px;--ih:756px"><img src="assets/ring-3.svg" alt="" /></div>
+        <div class="ring" style="--l:495.27px;--t:96px;--w:1015.06px;--h:820.96px;--iw:900px;--ih:648px"><img src="assets/ring-4.svg" alt="" /></div>
+        <div class="ring" style="--l:592.73px;--t:150px;--w:845.88px;--h:684.13px;--iw:750px;--ih:540px"><img src="assets/ring-5.svg" alt="" /></div>
+        <div class="ring" style="--l:690.18px;--t:204px;--w:676.71px;--h:547.31px;--iw:600px;--ih:432px"><img src="assets/ring-6.svg" alt="" /></div>
+        <div class="ring" style="--l:787.64px;--t:258px;--w:507.53px;--h:410.48px;--iw:450px;--ih:324px"><img src="assets/ring-7.svg" alt="" /></div>
+        <div class="ring" style="--l:885.09px;--t:312px;--w:338.35px;--h:273.65px;--iw:300px;--ih:216px"><img src="assets/ring-8.svg" alt="" /></div>
+        <div class="ring" style="--l:982.55px;--t:366px;--w:169.18px;--h:136.83px;--iw:150px;--ih:108px"><img src="assets/ring-9.svg" alt="" /></div>
+      </div>
+
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--copper hero__eyebrow">
+          <span class="eyebrow__long">&lt; FIND IT · UNLOCK IT · BUILD IT /&gt;</span>
+          <span class="eyebrow__short">&lt; FIND · UNLOCK · BUILD /&gt;</span>
+        </p>
+        <h1 class="hero__title">HUNT<span>2</span>BUILD</h1>
+        <p class="script hero__script">scan the code, solve the problem, find the treasure.</p>
+        <p class="body hero__lead">
+          A One Piece-themed hackathon by the CSE Club at ESI. Nine crews hunt for hidden QR treasures
+          <span class="hide-mobile">across campus,</span> then get 72 hours to build what they unlock.
+        </p>
+
+        <div class="hero__map-slot" id="mapSlot"></div>
+
+        <div class="hero__ctas">
+          <a class="btn-mint btn-mint--hero" href="#join">
+            <span>Register your crew</span>
+            <img src="assets/flag.png" alt="" />
+          </a>
+          <a class="btn btn--outline" href="#how">
+            <span>READ THE MAP</span>
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <img class="hero__ixe" src="assets/ixe.png" alt="IXE" />
+          <span class="chip">CSE CLUB · ESI ALGER</span>
+          <span class="chip chip--copper">DATE: TBA</span>
+          <span class="chip chip--dark">9 CREWS MAX</span>
+        </div>
+      </div>
+
+      <div class="hero__map" id="heroMap">
+        <div class="map">
+          <div class="map__img-wrap"><img src="assets/map.png" alt="Treasure map of ESI campus" /></div>
+          <div class="map__label map__label--top"><p class="mono-label">ESI CAMPUS · GRAND LINE</p></div>
+          <div class="map__label map__label--start"><p class="mono-label">START</p></div>
+          <div class="map__label map__label--x"><p class="script script--s">x marks the QR</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Event facts">
+      <div class="stat"><p class="stat__value">9</p><p class="stat__label">CREWS ON THE HUNT</p></div>
+      <div class="stat"><p class="stat__value">9</p><p class="stat__label">HIDDEN QR TREASURES</p></div>
+      <div class="stat"><p class="stat__value">3</p><p class="stat__label">CHALLENGE TRACKS</p></div>
+      <div class="stat"><p class="stat__value">72H</p><p class="stat__label">OF NON-STOP BUILDING</p></div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--light how" id="how">
+      <header class="section-header">
+        <p class="eyebrow eyebrow--copper">// HOW IT WORKS</p>
+        <h2 class="h2">FIND IT. UNLOCK IT. BUILD IT.</h2>
+      </header>
+
+      <div class="steps">
+        <article class="step-card step-card--copper">
+          <div class="step-card__top">
+            <div class="icon-box"><img src="assets/step-map.svg" alt="" /></div>
+            <span class="step-card__num">01</span>
+          </div>
+          <h3 class="h3">FIND IT</h3>
+          <p class="small">Read the One Piece map of ESI and hunt down one of the nine QR codes hidden across campus.</p>
+        </article>
+
+        <article class="step-card step-card--mint">
+          <div class="step-card__top">
+            <div class="icon-box"><img src="assets/step-unlock.svg" alt="" /></div>
+            <span class="step-card__num">02</span>
+          </div>
+          <h3 class="h3">UNLOCK IT</h3>
+          <p class="small">Scan it. The central system checks the code is still free, locks it to your crew and reveals your challenge. Each code works once.</p>
+        </article>
+
+        <article class="step-card step-card--copper">
+          <div class="step-card__top">
+            <div class="icon-box"><img src="assets/step-code.svg" alt="" /></div>
+            <span class="step-card__num">03</span>
+          </div>
+          <h3 class="h3">BUILD IT</h3>
+          <p class="small">72 hours to analyse the problem, ship a working prototype and pitch it to the jury.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TREASURE BOARD -->
+    <section class="section section--dark board" id="tracks">
+      <div class="board__copy">
+        <header class="section-header">
+          <p class="eyebrow eyebrow--mint">// LIVE TREASURE BOARD</p>
+          <h2 class="h2 h2--light">
+            <span class="hide-mobile">9 QR CODES. SINGLE USE. NO SECOND CHANCES.</span>
+            <span class="show-mobile">9 QR CODES. SINGLE USE.</span>
+          </h2>
+        </header>
+
+        <p class="body body--sand board__text">
+          <span class="hide-mobile">Every three codes hide the same challenge, so three crews race on each track. The moment a crew scans a free code, it locks to them for good.</span>
+          <span class="show-mobile">Every three codes hide the same challenge. Scan a free one and it&rsquo;s yours for good.</span>
+        </p>
+
+        <div class="terminal" aria-hidden="true">
+          <p>&gt; qr.scan()   // opens a problem</p>
+          <p>&gt; while (!solved) { think(); }</p>
+          <p>&gt; return treasure;</p>
+        </div>
+      </div>
+
+      <div class="board__grid-wrap">
+        <div class="qr-grid" id="qrGrid" role="list"></div>
+        <p class="swipe-hint">SWIPE → 9 CODES</p>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="section section--light agenda" id="agenda">
+      <header class="section-header">
+        <p class="eyebrow eyebrow--copper">// THE VOYAGE</p>
+        <h2 class="h2">
+          <span class="hide-mobile">FOUR DAYS. ONE CREW. ZERO SLEEP.</span>
+          <span class="show-mobile">FOUR DAYS. ONE CREW.</span>
+        </h2>
+      </header>
+
+      <div class="day-tabs" id="dayTabs" role="tablist" aria-label="Agenda days">
+        <button class="chip chip--tab is-active" role="tab" aria-selected="true" data-day="1"><span class="hide-mobile">DAY 1 · THE HUNT</span><span class="show-mobile">DAY 1</span></button>
+        <button class="chip chip--tab" role="tab" aria-selected="false" data-day="2">DAY 2</button>
+        <button class="chip chip--tab" role="tab" aria-selected="false" data-day="3">DAY 3</button>
+        <button class="chip chip--tab" role="tab" aria-selected="false" data-day="4"><span class="hide-mobile">DAY 4 · FINALE</span><span class="show-mobile">DAY 4</span></button>
+      </div>
+
+      <div class="agenda__body">
+        <div class="agenda__rows" id="agendaRows" role="tabpanel" aria-live="polite"></div>
+
+        <aside class="agenda__aside">
+          <div class="finale">
+            <p class="mono-label finale__tag">DAY 4 · FINALE</p>
+            <h3 class="h3 h3--light">PITCH. WIN. CELEBRATE.</h3>
+            <ul class="finale__list">
+              <li><span>12:30</span><p>Final touches &amp; submissions</p></li>
+              <li><span>13:30</span><p>Presentations to the jury</p></li>
+              <li><span>16:30</span><p>Winners announced</p></li>
+              <li><span>17:00</span><p>Closing ceremony</p></li>
             </ul>
+            <p class="script script--m finale__script">one crown per track.</p>
+          </div>
+          <img class="agenda__compass" src="assets/compass.png" alt="" aria-hidden="true" />
+        </aside>
+      </div>
+    </section>
 
-            <a href="#" class="button">REGISTER</a>
-        </nav>
+    <!-- WHY JOIN -->
+    <section class="section section--sand why" id="why">
+      <header class="section-header">
+        <p class="eyebrow eyebrow--copper">// WHY JOIN THE CREW</p>
+        <h2 class="h2">MORE THAN A HACKATHON.</h2>
+      </header>
 
-    </header>
+      <div class="objectives">
+        <article class="objective">
+          <div class="objective__head"><span class="eyebrow eyebrow--copper">01</span><h3 class="h3">INNOVATE</h3></div>
+          <p class="small">Turn a real-world problem into a working prototype in limited time.</p>
+        </article>
+        <article class="objective">
+          <div class="objective__head"><span class="eyebrow eyebrow--copper">02</span><h3 class="h3">TEAM UP</h3></div>
+          <p class="small">Build with students whose skills complement yours.</p>
+        </article>
+        <article class="objective">
+          <div class="objective__head"><span class="eyebrow eyebrow--copper">03</span><h3 class="h3">MEET THE PROS</h3></div>
+          <p class="small">Connect with mentors, professionals, companies and ESI.</p>
+        </article>
+        <article class="objective">
+          <div class="objective__head"><span class="eyebrow eyebrow--copper">04</span><h3 class="h3">GET SEEN</h3></div>
+          <p class="small">Showcase your project and keep building it after the event.</p>
+        </article>
+      </div>
+    </section>
 
-    <main>
-        <section>
-            <div class="hero-content">
-                <p>FIND IT · UNLOCK IT · BUILD IT</p>
-                <h1>HUNT2BUILD</h1>
-                <p class="description-subtitle">scan the code, solve the problem, find the treasure.</p>
-                <p class="hero-description">A One Piece-themed hackathon by the CSE Club at ESI. Nine crews hunt for hidden QR treasures across campus, then get 72 hours to build what they unlock.</p>
-                <a href="#" class="button">Register your crew</a>
-                <a href="#" class="button">Read the map</a>
-                <ul>
-                     <li>CSE CLUB · ESI ALGER</li>
-                     <li>DATE: TBA</li>
-                     <li>9 CREWS MAX</li>
-                </ul>
-            </div>
+    <!-- FINAL CTA -->
+    <section class="cta" id="join">
+      <img class="cta__ajala" src="assets/ajala.png" alt="" />
+      <p class="script cta__script">ready to set sail?</p>
+      <h2 class="cta__title">JOIN THE HUNT.</h2>
+      <p class="body cta__text">Gather your crew, read the map and claim your treasure before someone else does.</p>
+      <div class="cta__buttons">
+        <a class="btn btn--dark" href="#" id="registerBtn"><span>REGISTER YOUR CREW</span><img src="assets/arrow-light.svg" alt="" /></a>
+        <a class="btn btn--outline" href="mailto:cse@esi.dz"><span>CONTACT CSE CLUB</span></a>
+      </div>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <img class="footer__mark" src="assets/logo-mark.png" alt="" />
+        <img class="footer__name" src="assets/logo-name.png" alt="HUNT2BUILD" />
+      </div>
+      <img class="footer__badge" src="assets/footer-badge.svg" alt="CSE Club" />
+    </div>
 
-            <figure class="hero-illustration">
-                <img src="./assets/svgs/map1.svg" alt="HUNT2BUILD treasure map">
+    <p class="mono-label footer__tag">&lt; FIND IT · UNLOCK IT · BUILD IT /&gt;</p>
 
-                <figcaption>
-                 ESI CAMPUS - GRAND LINE
-                </figcaption>
-            </figure>
+    <div class="contact">
+      <div class="contact__text">
+        <p class="contact__eyebrow">Still Have Questions About</p>
+        <p class="contact__title">Contact Us</p>
+        <div class="contact__lines">
+          <p class="contact__email">By email <a href="mailto:cse@esi.dz">cse@esi.dz</a></p>
+          <p class="contact__social-label">Or on social media</p>
+        </div>
+      </div>
+      <ul class="social">
+        <li><a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt="" /></a></li>
+        <li><a href="#" aria-label="Instagram"><img src="assets/instagram.svg" alt="" /></a></li>
+        <li><a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="" /></a></li>
+        <li><a href="#" aria-label="YouTube"><img src="assets/youtube.svg" alt="" /></a></li>
+        <li><a href="#" aria-label="X / Twitter"><img src="assets/twitter.svg" alt="" /></a></li>
+      </ul>
+    </div>
+  </footer>
 
-        </section>
-
-        <section class="stats">
-            <div class="stat-item">
-                <h2>9</h2>
-                <p>CREWS ON THE HUNT</p>
-            </div>
-
-            <div class="stat-item">
-                <h2>9</h2>
-                <p>HIDDEN QR TREASURES</p>
-            </div>
-
-            <div class="stat-item">
-                <h2>3</h2>
-                <p>CHALLENGE TRACKS</p>
-            </div>
-
-            <div class="stat-item">
-                <h2>72H</h2>
-                <p>OF NON-STOP BUILDING</p>
-            </div>
-
-        </section>
-
-    </main>
-
-    
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="300" height="216" viewBox="0 0 300 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="stroke0_0_307" fill="white">
+<path d="M300 108C300 167.647 232.843 216 150 216C67.1573 216 0 167.647 0 108C0 48.3532 67.1573 0 150 0C232.843 0 300 48.3532 300 108Z"/>
+</mask>
+<path id="Ring" d="M300 108C300 167.647 232.843 216 150 216C67.1573 216 0 167.647 0 108C0 48.3532 67.1573 0 150 0C232.843 0 300 48.3532 300 108Z" stroke-width="4" stroke="#111111" stroke-opacity="0.08" mask="url(#stroke0_0_307)"/>
+</svg>
