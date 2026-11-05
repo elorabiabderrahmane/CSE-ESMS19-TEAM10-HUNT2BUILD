@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HUNT2BUILD — A One Piece-themed hackathon by CSE Club · ESI</title>
+  <title>HUNT2BUILD</title>
   <meta name="description" content="Scan the code, solve the problem, find the treasure. Nine crews hunt for hidden QR treasures across ESI campus, then get 72 hours to build what they unlock." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
   <!-- NAV -->
   <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="HUNT2BUILD — home">
-      <img class="brand__mark" src="assets/logo-mark.svg" alt="" />
+      <img class="brand__mark" src="assets/favicon.svg" alt="" />
       <img class="brand__name" src="assets/logo-name.svg" alt="HUNT2BUILD" />
     </a>
 
@@ -216,10 +216,52 @@
 
       <div class="agenda__body">
         <div class="agenda__rows" id="agendaRows" role="tabpanel" aria-live="polite">
-          <picture>
-            <source media="(max-width: 480px)" srcset="assets/Day%201%20rows%28phone%29.svg" />
-            <img class="agenda__rows-asset" src="assets/Day%201%20rows.svg" alt="Day 1 event schedule" />
-          </picture>
+          <div class="agenda__toolbar">
+            <p class="agenda__hint">SELECT ANY TEXT OR COPY THE FULL SCHEDULE.</p>
+          </div>
+          <div class="agenda__table-wrap">
+            <table class="agenda__table">
+              <caption class="sr-only">Day 1 event schedule</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">09:00 – 09:15</th>
+                  <td>Opening ceremony</td>
+                </tr>
+                <tr>
+                  <th scope="row">09:15 – 09:30</th>
+                  <td>Hunt plan briefing</td>
+                </tr>
+                <tr class="agenda__row--mint">
+                  <th scope="row">09:30 – 10:30</th>
+                  <td>QR codes hunt</td>
+                </tr>
+                <tr>
+                  <th scope="row">10:30 – 10:45</th>
+                  <td>Team assignment check</td>
+                </tr>
+                <tr>
+                  <th scope="row">10:45 – 11:15</th>
+                  <td>Challenge presentations</td>
+                </tr>
+                <tr>
+                  <th scope="row">11:15 – 11:45</th>
+                  <td>Technical kickoff + Q&amp;A</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:00 – 13:00</th>
+                  <td>Lunch break</td>
+                </tr>
+                <tr class="agenda__row--copper">
+                  <th scope="row">13:00 – 16:00</th>
+                  <td>Start coding</td>
+                </tr>
+                <tr>
+                  <th scope="row">16:00 → 08:00</th>
+                  <td>Coding through the night <span class="agenda__detail">(coffee, dinner &amp; activities included)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <aside class="agenda__aside">
@@ -283,7 +325,7 @@
   <footer class="footer">
     <div class="footer__brand">
       <div class="footer__logo">
-        <img class="footer__mark" src="assets/logo-mark.svg" alt="" />
+        <img class="footer__mark" src="assets/favicon.svg" alt="" />
         <img class="footer__name" src="assets/logo-name.svg" alt="HUNT2BUILD" />
       </div>
       <img class="footer__badge" src="assets/footer-badge.svg" alt="CSE Club" />
@@ -301,11 +343,11 @@
         </div>
       </div>
       <ul class="social">
-        <li><a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt="" /></a></li>
-        <li><a href="#" aria-label="Instagram"><img src="assets/instagram.svg" alt="" /></a></li>
-        <li><a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="" /></a></li>
-        <li><a href="#" aria-label="YouTube"><img src="assets/youtube.svg" alt="" /></a></li>
-        <li><a href="#" aria-label="X / Twitter"><img src="assets/twitter.svg" alt="" /></a></li>
+        <li><a href="https://www.facebook.com/club.scientifique.esi/" target="_blank" rel="noopener noreferrer" aria-label="CSE Club on Facebook"><img src="assets/facebook.svg" alt="" /></a></li>
+        <li><a href="https://www.instagram.com/cse.club/" target="_blank" rel="noopener noreferrer" aria-label="CSE Club on Instagram"><img src="assets/instagram.svg" alt="" /></a></li>
+        <li><a href="https://www.linkedin.com/company/cse-club/" target="_blank" rel="noopener noreferrer" aria-label="CSE Club on LinkedIn"><img src="assets/linkedin.svg" alt="" /></a></li>
+        <li><a href="https://www.youtube.com/channel/UCHgeF6ELJW0Pt1vYoAomCig" target="_blank" rel="noopener noreferrer" aria-label="CSE Club on YouTube"><img src="assets/youtube.svg" alt="" /></a></li>
+        <li><a href="https://x.com/CSESI_Club" target="_blank" rel="noopener noreferrer" aria-label="CSE Club on X"><img src="assets/twitter.svg" alt="" /></a></li>
       </ul>
     </div>
   </footer>

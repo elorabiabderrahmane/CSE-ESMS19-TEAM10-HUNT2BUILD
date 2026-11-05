@@ -98,3 +98,29 @@ if (qrGrid) {
   qrGrid.addEventListener("pointercancel", stopDragging);
   qrGrid.addEventListener("pointerleave", stopDragging);
 }
+
+const revealTargets = document.querySelectorAll(
+  ".section-header, .steps .step-card, .board__grid-wrap, .terminal, " +
+  ".agenda__body, .objectives .objective, .cta > *, .footer > *"
+);
+
+if (revealTargets.length && "IntersectionObserver" in window) {
+  document.documentElement.classList.add("motion-ready");
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  revealTargets.forEach((element, index) => {
+    element.classList.add("reveal-on-scroll");
+    element.style.setProperty("--reveal-delay", `${(index % 4) * 90}ms`);
+    revealObserver.observe(element);
+  });
+}
